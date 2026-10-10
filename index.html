@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10050b">
+
+<title>For Nellie ❤️</title>
+
+<style>
+:root {
+    --gold: #ffd66b;
+    --pink: #ff477e;
+    --dark: #10050b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #fff5f8;
+    background:
+        radial-gradient(ellipse at top, #4b102a 0%, transparent 55%),
+        linear-gradient(150deg, #090609, #210817, #080609);
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    padding: 55px 18px 35px;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font: 11px Arial, sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: clamp(40px, 11vw, 72px);
+    line-height: 1.12;
+    margin: 22px 0 12px;
+    color: var(--gold);
+    text-shadow: 0 0 25px #ff477e70;
+}
+
+header h1 span {
+    color: #ff8cab;
+}
+
+.intro {
+    max-width: 320px;
+    line-height: 1.9;
+    color: #f4dce5;
+    font-size: 16px;
+}
+
+.big-heart {
+    font-size: 75px;
+    animation: heartbeat 1.5s infinite;
+    filter: drop-shadow(0 0 18px #ff174d);
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+}
+
+.primary-btn {
+    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, #ffe8a2, #e8a832);
+    color: #260817;
+    font-weight: bold;
+    padding: 15px 23px;
+    border-radius: 30px;
+    margin-top: 17px;
+    box-shadow: 0 0 22px #ffd66b30;
+}
+
+section {
+    padding: 45px 16px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.section-label {
+    color: var(--pink);
+    text-transform: uppercase;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--gold);
+    margin: 12px 0;
+}
+
+.description {
+    color: #d8bdc9;
+    line-height: 1.8;
+    font: 14px Arial, sans-serif;
+    margin: 10px auto 25px;
+    max-width: 390px;
+}
+
+.panel {
+    background: linear-gradient(145deg, #27101f, #10090f);
+    border: 1px solid #bd8c5b70;
+    border-radius: 22px;
+    padding: 14px;
+    box-shadow: 0 15px 40px #0005;
+}
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    height: min(62vh, 420px);
+    min-height: 260px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #090609;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.photo-frame img.changing {
+    opacity: 0.15;
+}
+
+.photo-count {
+    color: var(--gold);
+    font: 12px Arial, sans-serif;
+    margin-top: 14px;
+}
+
+.caption {
+    min-height: 25px;
+    color: #ffe2ec;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.control-btn {
+    background: #29121f;
+    color: var(--gold);
+    border: 1px solid #b88961;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 13px;
+}
+
+.control-btn:active,
+.primary-btn:active {
+    transform: scale(.97);
+}
+
+.dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 17px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #755264;
+}
+
+.dot.active {
+    background: var(--gold);
+    box-shadow: 0 0 8px var(--gold);
+}
+
+.video-box {
+    margin: 20px 0;
+    padding: 12px;
+    background: #160b12;
+    border: 1px solid #bd8c5b70;
+    border-radius: 18px;
+}
+
+.video-box h3 {
+    color: #ffb7cb;
+    font-size: 20px;
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    background: black;
+    border-radius: 12px;
+}
+
+.video-note {
+    color: #c9aebb;
+    font: 12px Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.letter {
+    text-align: left;
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #341023, #150a12);
+    border: 1px solid #d9ae6470;
+    line-height: 2;
+    color: #fce8ef;
+    white-space: pre-line;
+}
+
+.letter strong {
+    color: var(--gold);
+}
+
+.hidden {
+    display: none;
+}
+
+.signature {
+    text-align: right;
+    color: var(--gold);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.promise {
+    font-size: 24px;
+    color: #ff9dbb;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+footer {
+    border-top: 1px solid #7d4b5d50;
+    padding: 32px 15px;
+    color: #bda1af;
+    font: 12px Arial, sans-serif;
+    line-height: 2;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -35px;
+    left: var(--left);
+    pointer-events: none;
+    z-index: 5;
+    animation: float-up var(--duration) linear forwards;
+    opacity: 0;
+}
+
+@keyframes float-up {
+    10% { opacity: .8; }
+    100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f9d887;
+    color: #210817;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font: 13px Arial, sans-serif;
+    display: none;
+    z-index: 10;
+    width: max-content;
+    max-width: 90%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+    <div class="eyebrow">A little something from my heart</div>
+    <div class="big-heart">❤️</div>
+
+    <h1>I Love You,<br><span>Nellie</span></h1>
+
+    <p class="intro">
+        Some people enter your life and make ordinary
+        moments feel extraordinary. This little world
+        was created just for you.
+    </p>
+
+    <button class="primary-btn"
+            onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+        Discover Your Surprise 💌
+    </button>
+</header>
+
+<main>
+
+<section id="memories">
+    <div class="section-label">Chapter One</div>
+    <h2>Our Memory Lane 📸</h2>
+    <p class="description">
+        Every picture holds a moment. Every moment
+        has a story. And every story is worth remembering.
+    </p>
+
+    <div class="panel">
+        <div class="photo-frame">
+            <img id="slide"
+                 src="Images/IMG-20261007-WA0051.jpg"
+                 alt="A special memory with Nellie">
+        </div>
+
+        <div class="photo-count" id="photoCount">
+            MEMORY 1
+        </div>
+
+        <p class="caption" id="caption">
+            A little memory, a lot of meaning ❤️
+        </p>
+
+        <div class="controls">
+            <button class="control-btn" onclick="previousPhoto()">
+                ❮ Previous
+            </button>
+
+            <button class="control-btn" id="playButton"
+                    onclick="toggleSlideshow()">
+                ▶ Play Slideshow
+            </button>
+
+            <button class="control-btn" onclick="nextPhoto()">
+                Next ❯
+            </button>
+        </div>
+
+        <div class="dots" id="dots"></div>
+    </div>
+</section>
+
+<section id="videos">
+    <div class="section-label">Chapter Two</div>
+    <h2>Moments in Motion 🎥</h2>
+
+    <p class="description">
+        Pictures freeze a moment. Videos let us experience
+        it again. Here are two memories to play whenever
+        you want to revisit them.
+    </p>
+
+    <div class="video-box">
+        <h3>Our First Memory 💕</h3>
+        <video controls playsinline preload="metadata">
+            <source src="videos/our-memory.mp4"
+                    type="video/mp4">
+            Your browser cannot play this video.
+        </video>
+        <p class="video-note">Take your time. Enjoy the memory ❤️</p>
+    </div>
+
+    <div class="video-box">
+        <h3>Another Special Moment 🌹</h3>
+        <video controls playsinline preload="metadata">
+            <source src="videos/our-memory%20(1).mp4"
+                    type="video/mp4">
+            Your browser cannot play this video.
+        </video>
+        <p class="video-note">Some moments deserve to be watched again.</p>
+    </div>
+</section>
+
+<section id="letter">
+    <div class="section-label">Chapter Three</div>
+    <h2>A Letter For You 💌</h2>
+
+    <p class="description">
+        There is something I wanted you to know.
+    </p>
+
+    <button class="primary-btn" id="letterButton"
+            onclick="revealLetter()">
+        Open My Heart ❤️
+    </button>
+
+    <div class="letter hidden" id="loveLetter">
+        <strong>Dear Nellie, ❤️</strong>
+
+        I may not always find the perfect words to explain
+        what you mean to me, but I want you to know that
+        you are genuinely special to me.
+
+        There is something about you that makes you
+        different from everyone else. Your presence,
+        your voice, your smile and the little things
+        about you have found a place in my heart.
+
+        I made this little website because I wanted to
+        give you something different — something you
+        could open and remember that someone cares
+        about you deeply.
+
+        I don't know everything the future holds, but
+        I know I would love to create more beautiful
+        memories with you, one moment at a time.
+
+        You don't have to be perfect. You don't have
+        to pretend to be someone else. Just being you
+        is part of what makes you special to me.
+
+        <strong>Nellie, I LOVE YOU. ❤️</strong>
+
+        <div class="signature">
+            With love, always. 💖
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-label">One Last Thing</div>
+    <h2>For You, Nellie ♾️</h2>
+
+    <div class="promise">
+        One heart.<br>
+        One special person.<br>
+        A thousand memories yet to make.
+    </div>
+
+    <p class="description">
+        If this made you feel even a little special,
+        then this little surprise has done its job.
+    </p>
+
+    <button class="primary-btn" onclick="sendLove()">
+        One More Heart ❤️
+    </button>
+</section>
+
+</main>
+
+<footer>
+    CREATED WITH LOVE ❤️<br>
+    A LITTLE CORNER OF THE INTERNET, JUST FOR NELLIE.<br>
+    <span style="color:#ffd66b">You are special. Never forget that.</span>
+</footer>
+
+<div id="toast" role="status"></div>
+
+<script>
+"use strict";
+
+// ============================================
+// YOUR ACTUAL PHOTO FILES
+// Paths are relative to Html/Index.html
+// ============================================
+
+const photos = [
+    {
+        src: "Images/IMG-20261007-WA0051.jpg",
+        caption: "A little memory, a lot of meaning ❤️"
+    },
+    {
+        src: "Images/IMG-20261008-WA0007.jpg",
+        caption: "Some moments stay in the heart 💕"
+    },
+    {
+        src: "Images/IMG-20261008-WA0008.jpg",
+        caption: "A memory worth keeping ✨"
+    },
+    {
+        src: "Images/IMG-20261008-WA0009.jpg",
+        caption: "You make ordinary moments special 💖"
+    },
+    {
+        src: "Images/IMG-20261008-WA0010.jpg",
+        caption: "A special person, a special memory ❤️"
+    },
+    {
+        src: "Images/IMG-20261008-WA0011.jpg",
+        caption: "Here's to more beautiful moments 🌹"
+    },
+    {
+        src: "Images/IMG-20261008-WA0013.jpg",
+        caption: "Some memories deserve their own chapter 💌"
+    },
+    {
+        src: "Images/IMG-20261008-WA0015.jpg",
+        caption: "You have a special place in my heart 💗"
+    },
+    {
+        src: "Images/IMG-20261008-WA0016.jpg",
+        caption: "More than a picture, a little memory ♾️"
+    },
+    {
+        src: "Images/IMG-20261008-WA0019.jpg",
+        caption: "And our story continues ❤️"
+    },
+    {
+        src: "Images/nellie1.jpg",
+        caption: "For you, Nellie 💕"
+    },
+    {
+        src: "Images/nellie2.jpg",
+        caption: "A little reminder that you matter 💖"
+    },
+    {
+        src: "Images/nellie3.jpg",
+        caption: "I LOVE YOU, NELLIE ❤️"
+    }
+];
+
+const slide = document.getElementById("slide");
+const caption = document.getElementById("caption");
+const photoCount = document.getElementById("photoCount");
+const dots = document.getElementById("dots");
+const playButton = document.getElementById("playButton");
+
+let current = 0;
+let timer = null;
+let toastTimer = null;
+
+// Build the photo navigation dots.
+photos.forEach((photo, index) => {
+    const dot = document.createElement("button");
+    dot.className = "dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", "Show memory " + (index + 1));
+
+    dot.addEventListener("click", () => {
+        stopSlideshow();
+        current = index;
+        showPhoto();
+    });
+
+    dots.appendChild(dot);
+});
+
+// Display the selected photo.
+function showPhoto() {
+    const photo = photos[current];
+
+    slide.classList.add("changing");
+
+    const nextImage = new Image();
+
+    nextImage.onload = function() {
+        slide.src = photo.src;
+        slide.alt = photo.caption;
+        slide.classList.remove("changing");
+    };
+
+    nextImage.onerror = function() {
+        slide.classList.remove("changing");
+        caption.textContent = "Photo not found: " + photo.src;
+        showToast("Check this photo's filename and extension.");
+    };
+
+    nextImage.src = photo.src;
+
+    caption.textContent = photo.caption;
+    photoCount.textContent =
+        "MEMORY " + (current + 1) + " OF " + photos.length;
+
+    Array.from(dots.children).forEach((dot, index) => {
+        dot.classList.toggle("active", index === current);
+    });
+}
+
+function nextPhoto() {
+    current = (current + 1) % photos.length;
+    showPhoto();
+}
+
+function previousPhoto() {
+    current = (current - 1 + photos.length) % photos.length;
+    showPhoto();
+}
+
+function stopSlideshow() {
+    if (timer !== null) {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    playButton.textContent = "▶ Play Slideshow";
+}
+
+function toggleSlideshow() {
+    if (timer !== null) {
+        stopSlideshow();
+        return;
+    }
+
+    nextPhoto();
+
+    timer = setInterval(nextPhoto, 3500);
+    playButton.textContent = "⏸ Pause Slideshow";
+}
+
+function revealLetter() {
+    const letter = document.getElementById("loveLetter");
+    const button = document.getElementById("letterButton");
+
+    letter.classList.toggle("hidden");
+
+    if (letter.classList.contains("hidden")) {
+        button.textContent = "Open My Heart ❤️";
+    } else {
+        button.textContent = "Close My Letter 💌";
+        letter.scrollIntoView({ behavior: "smooth", block: "center" });
+        burstHearts();
+    }
+}
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+    toast.style.display = "block";
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+        toast.style.display = "none";
+    }, 2800);
+}
+
+function burstHearts() {
+    const emojis = ["❤️", "💖", "💕", "💗", "💘"];
+
+    for (let i = 0; i < 14; i++) {
+        const heart = document.createElement("span");
+
+        heart.className = "floating-heart";
+        heart.textContent = emojis[
+            Math.floor(Math.random() * emojis.length)
+        ];
+
+        heart.style.setProperty("--left", Math.random() * 100 + "vw");
+        heart.style.setProperty("--duration", (3 + Math.random() * 3) + "s");
+        heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+
+        heart.addEventListener("animationend", () => heart.remove());
+    }
+}
+
+function sendLove() {
+    burstHearts();
+    showToast("Nellie, you are loved. ❤️");
+
+    document.getElementById("home").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// Initialize the first memory.
+showPhoto();
+
+// Gentle floating hearts; no sound or forced video playback.
+setInterval(() => {
+    if (Math.random() > 0.45) {
+        burstSingleHeart();
+    }
+}, 2400);
+
+function burstSingleHeart() {
+    const heart = document.createElement("span");
+
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > 0.5 ? "♥" : "♡";
+
+    heart.style.setProperty("--left", Math.random() * 100 + "vw");
+    heart.style.setProperty("--duration", (5 + Math.random() * 4) + "s");
+    heart.style.color = Math.random() > 0.5 ? "#ff789f" : "#ffd66b";
+    heart.style.fontSize = (12 + Math.random() * 17) + "px";
+
+    document.body.appendChild(heart);
+
+    heart.addEventListener("animationend", () => heart.remove());
+}
+</script>
+
+</body>
+</html>
